@@ -1,12 +1,12 @@
 local FakeAreaTrigger = class()
-function FakeAreaTrigger:init(params)
+function FakeAreaTrigger:init(params,sound_path)
 	self._id = params.id
 	self._position = Vector3(params.x,params.y,params.z)
 	self._radius = params.radius
 	self._slotmask = params.slotmask or managers.slot:get_mask("players")
 	self._active = params.start_active
 	self._message = params.message
-	self._sound_path = params.sound
+	self._sound_path = params.sound and sound_path
 	
 	self._debug_color = Color.red:with_alpha(0.6)
 end

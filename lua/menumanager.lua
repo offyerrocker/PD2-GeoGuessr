@@ -97,7 +97,7 @@ end
 
 function GeoGuessr:InstantiateTrigger(params)
 	local FakeAreaTrigger = self:require("lua/FakeAreaTrigger")
-	local trigger = FakeAreaTrigger:new(params)
+	local trigger = FakeAreaTrigger:new(params,self._mod_path .. "assets/bad_melody.ogg")
 	table.insert(self._current_triggers,#self._current_triggers+1,trigger)
 end
 
